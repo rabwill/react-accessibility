@@ -20,7 +20,7 @@ export default class ReactOpenPanelWebPart extends BaseClientSideWebPart <IReact
 
   public render(): void {
     const element: React.ReactElement<IReactOpenPanelProps> = React.createElement(
-      ReactOpenPanelWithoutAccessibility,
+      ReactOpenPanelWithAccessibility,
       {
         description: this.properties.description
       }

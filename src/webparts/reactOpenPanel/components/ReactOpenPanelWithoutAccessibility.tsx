@@ -44,29 +44,22 @@ export default class ReactOpenPanelWithoutAccessibility extends React.Component<
             <div className={`${styles[`grid`]}`}>
           <div className={`${styles[`grid-item`]}`}>
           <div className={`${styles[`grid-item--top-large`]}` }>
-              <h2 className={`${styles[`grid-item__title`]}`}>
-              Superb title here
+           <h2 className={`${styles[`grid-item__title`]}`}>
+             This is an incredible title
               </h2>
               <div className={`${styles[`grid-item__image`]}` } >
                 <img style={style1} src="https://safebooru.org//images/2793/a6ab2ce0c3b480ce93861aeae841afb40fbe3749.jpg?2909270" />
               </div>
             <div>
-
-            <p className={`${styles[`grid-item__excerpt`]}` }>
+              <p className={`${styles[`grid-item__excerpt`]}` }>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nam odit possimus dolorem.
               </p>
-            </div>
-            
-                          
+            </div>              
           </div>
-   </div>
-
- 
-</div>
-
-
-            </div>
           </div>
+        </div>
+        </div>
+        </div>
         </Panel>
       </div>
 
