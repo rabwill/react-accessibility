@@ -36,28 +36,18 @@ export default class ReactOpenPanelWithAccessibility extends React.Component<
     };
     return (
       <div ref={this.ref} tabIndex = {0}>
-      <div className={`${styles[`grid`]}`}>
-                <div className={`${styles[`grid-item`]}`}>
-                  <div className={`${styles[`grid-item--top-large`]}`}>
-                    <h2
-                      tabIndex={0}
-                      className={`${styles[`grid-item__title`]}`}
-                    >
-                    This is an area that needs to be seen
-                    </h2>
-                 
-                    <div>
-                      <p
-                        tabIndex={0}
-                        className={`${styles[`grid-item__excerpt`]}`}
-                      >
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Quibusdam nam odit possimus dolorem.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <React.Fragment>
+          <h2 tabIndex={0}
+            className={`${styles[`grid-item__title`]}`}>
+          This is an area that needs to be seen
+          </h2>
+            <p tabIndex={0}
+              className={`${styles[`grid-item__excerpt`]}`} >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam nam odit possimus dolorem.
+            </p>
+      </React.Fragment>
+      
         <DefaultButton
           tabIndex={0}
           role="button"
