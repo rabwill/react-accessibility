@@ -21,13 +21,13 @@ export default class ReactOpenPanelWithAccessibility extends React.Component<
   private _hidePanel = (): void => {
     this.setState({ showPanel: false });
   }
-  nameInp: HTMLDivElement;
+  private ref=React.createRef<HTMLDivElement>();
   public componentDidMount() {
-    this.focusDiv();
+    this._focusDiv();
   }
 
- public focusDiv() {
-  this.nameInp.focus();
+  private _focusDiv() {
+  this.ref.current.focus();
   }
   public render(): React.ReactElement<IReactOpenPanelProps> {
     const style1 = {
@@ -35,7 +35,7 @@ export default class ReactOpenPanelWithAccessibility extends React.Component<
       height: "300px",
     };
     return (
-      <div ref={(nameInp) => {this.nameInp = nameInp}} tabIndex = {0}>
+      <div ref={this.ref} tabIndex = {0}>
       <div className={`${styles[`grid`]}`}>
                 <div className={`${styles[`grid-item`]}`}>
                   <div className={`${styles[`grid-item--top-large`]}`}>
