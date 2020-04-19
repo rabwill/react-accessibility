@@ -1,0 +1,184 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+.reactOpenPanel {
+  .container {
+    max-width: 700px;
+    margin: 0px auto;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    @include ms-lg10;
+    @include ms-xl8;
+    @include ms-xlPush2;
+    @include ms-lgPush1;
+  }
+
+  .title {
+    @include ms-font-xl;
+    @include ms-fontColor-white;
+  }
+
+  .subTitle {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .description {
+    @include ms-font-l;
+    @include ms-fontColor-white;
+  }
+
+  .button {
+    // Our button
+    text-decoration: none;
+    height: 32px;
+
+    // Primary Button
+    min-width: 80px;
+    background-color: $ms-color-themePrimary;
+    border-color: $ms-color-themePrimary;
+    color: $ms-color-white;
+
+    // Basic Button
+    outline: transparent;
+    position: relative;
+    font-family: "Segoe UI WestEuropean","Segoe UI",-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: $ms-font-size-m;
+    font-weight: $ms-font-weight-regular;
+    border-width: 0;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 16px;
+
+    .label {
+      font-weight: $ms-font-weight-semibold;
+      font-size: $ms-font-size-m;
+      height: 32px;
+      line-height: 32px;
+      margin: 0 4px;
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+  .grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(15, 33vh);
+    grid-gap: calc(1vh);
+ 
+    background-color: #dddddd;
+ 
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+ }
+ 
+ .grid-item {
+    display: flex;
+    margin: 0.5rem 1rem;
+    flex-direction: column;
+ 
+    background-color: #fffefc;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+ 
+    overflow: hidden;
+ }
+ 
+ .grid-item__excerpt {
+    font-size: 0.85rem;
+ }
+ 
+ .grid-item__title,
+ .grid-item__excerpt {
+    padding: 1rem;
+    margin: 0;
+ }
+ 
+ .grid-item__image {
+    flex: 1 1 auto;
+ 
+    background-size: cover;
+    background-position: center;
+ }
+ 
+ .grid-item:nth-of-type(3n + 1) {
+    scroll-snap-align: start;
+ }
+ 
+ @media (min-width: 900px) {
+    .grid {
+       grid-template-columns: repeat(12, 1fr);
+       grid-template-rows: repeat(30, 16vh);
+    }
+ 
+    .grid-item--top-large {
+       grid-column: 1 / span 5;
+       grid-row: 1 / span 6;
+    }
+ 
+    .grid-item--top-small,
+    .grid-item--top-medium {
+       grid-row: span 3;
+    }
+ 
+    .grid-item--top-medium {
+       grid-column: span 4;
+    }
+ 
+    .grid-item--top-small {
+       grid-column: span 3;
+    }
+ 
+    .grid-item--middle-first {
+       grid-row: 7 / span 4;
+       grid-column: 1 / span 6;
+    }
+ 
+    .grid-item--middle-small {
+       grid-column: span 6;
+       grid-row: span 2;
+    }
+ 
+    .grid-item--middle-last {
+       grid-row: 9 / span 4;
+       grid-column: 7 / span 6;
+    }
+ 
+    .grid-item--bottom-long {
+       grid-column: span 12;
+       grid-row: span 2;
+    }
+ 
+    .grid-item--bottom-small {
+       grid-column: span 3;
+       grid-row: span 2;
+    }
+ 
+    .grid-item:nth-of-type(3n + 1) {
+       scroll-snap-align: none;
+    }
+ 
+    .grid-item:nth-of-type(1),
+    .grid-item:nth-of-type(6),
+    .grid-item:nth-of-type(10) {
+       scroll-snap-align: start;
+    }
+ 
+    .grid-item__excerpt {
+       font-size: 1rem;
+    }
+ }
+ 
+}

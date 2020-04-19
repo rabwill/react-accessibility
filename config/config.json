@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "react-open-panel-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/reactOpenPanel/ReactOpenPanelWebPart.js",
+          "manifest": "./src/webparts/reactOpenPanel/ReactOpenPanelWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "ReactOpenPanelWebPartStrings": "lib/webparts/reactOpenPanel/loc/{locale}.js"
+  }
+}
